@@ -12,7 +12,7 @@ class Sql{
         $this->password = $password;
         $this->dataBase=$dataBase;
     }
-    public function connectToDB(){
+    private function connectToDB(){
        $res=mysqli_connect($this->host,$this->login,$this->password,$this->dataBase);
        return $res;
     }
